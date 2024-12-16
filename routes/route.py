@@ -56,4 +56,5 @@ async def login_user(login: Login) -> User:
     if not verify_password(login.password, existing_user["password"]):
         raise HTTPException(status_code=400, detail="Incorrect password.")
     user = User(username=existing_user["username"], email=existing_user["email"], full_name=existing_user["full_name"])
+
     return user
