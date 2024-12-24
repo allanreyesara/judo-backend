@@ -12,3 +12,5 @@ client = MongoClient(uri)
 db = client.judoCoroDB
 
 user_collection = db["user"]
+
+session_collection = db["session"]
